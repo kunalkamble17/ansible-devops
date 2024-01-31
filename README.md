@@ -16,16 +16,24 @@ sudo apt-get install ansible
 ansible --version
 ansible [core 2.15.9]
   config file = /etc/ansible/ansible.cfg
+  
   configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  
   ansible python module location = /usr/lib/python3/dist-packages/ansible
+  
   ansible collection location = /home/ubuntu/.ansible/collections:/usr/share/ansible/collections
+  
   executable location = /usr/bin/ansible
+  
   python version = 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] (/usr/bin/python3)
+  
   jinja version = 3.0.3
+  
   libyaml = True
 
   sudo vim /etc/ansible/hosts
-  [servers]
+  
+  #[servers]
 
 server1 ansible_host=172.31.9.82
 server2 ansible_host=172.31.10.30
@@ -50,3 +58,4 @@ ansible-inventory --list -y
 
 #Playbook
 ansible-playbook -v enter-playbook-name.yaml
+:wq
