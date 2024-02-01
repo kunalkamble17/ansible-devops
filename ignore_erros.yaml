@@ -1,6 +1,6 @@
 -
   name: ignore erros
-  hosts: servers
+  hosts: all
   tasks:
     - name: print Hello Babes
       debug:
@@ -9,7 +9,7 @@
     - name: Print OS Name
       debug:
         msg: "{{ansible_distribution}}"
-        ignore_erros: true
+      ignore_erros: true
 
     - name: Print msg
       debug:
