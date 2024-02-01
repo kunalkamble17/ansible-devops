@@ -4,7 +4,7 @@
   tasks:
         
     - name: Install HTTPD
-      dnf:
+      yum:
         name: httpd
         state: present
       when: ansible_distribution == "CentOS" or ansible_os_family == "RedHat"
