@@ -1,0 +1,7 @@
+-
+  name: Gather Fact
+  hosts: all
+  tasks:
+    - name: print Hello Babes
+      debug:
+        msg: "Kya Bolte Public"
