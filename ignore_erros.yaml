@@ -1,6 +1,6 @@
 -
-  name: Gather Fact
-  hosts: all
+  name: ignore erros
+  hosts: servers
   tasks:
     - name: print Hello Babes
       debug:
