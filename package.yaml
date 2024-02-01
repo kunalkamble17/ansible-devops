@@ -2,14 +2,9 @@
   hosts: servers
   become: true
   tasks:
-
-    - name: python2
-      yum:
-        name: python2-rpm
-        state: present
         
     - name: Install HTTPD
-      yum:
+      dnf:
         name: httpd
         state: present
       when: ansible_distribution == "CentOS" or ansible_os_family == "RedHat"
