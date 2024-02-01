@@ -9,7 +9,7 @@
     - name: Print OS Name
       debug:
         msg: "{{ansible_distribution}}"
-      ignore_erros: true
+      ignore_errors: true
 
     - name: Print msg
       debug:
