@@ -1,0 +1,15 @@
+-
+  name: Gather Fact
+  hosts: all
+  tasks:
+    - name: print Hello Babes
+      debug:
+        msg: "Kya Bolte Public"
+
+    - name: Print OS Name
+      debug:
+        msg: "{{ansible_distribution}}"
+        ignore_erros: true
+    - name: Print Ip Address
+      debug:
+        msg: "{{ansible_default_ipv4.address}}"
