@@ -1,0 +1,14 @@
+- name: Loop
+  hosts: all
+  tasks:
+
+  - name: install git, wget, vim, httpd
+    yum:
+      name: "{{item}}"
+      state: present
+    loop:
+      - git
+      - wget
+      - vim
+      - httpd
+      - nginx
