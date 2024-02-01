@@ -6,6 +6,7 @@
     yum:
       name: "{{item}}"
       state: present
+    become: true
     loop:
       - git
       - wget
