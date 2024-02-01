@@ -10,6 +10,7 @@
       debug:
         msg: "{{ansible_distribution}}"
         ignore_erros: true
-    - name: Print Ip Address
+
+    - name: Print msg
       debug:
-        msg: "{{ansible_default_ipv4.address}}"
+        msg: "Hello Public"
