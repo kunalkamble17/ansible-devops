@@ -1,5 +1,12 @@
 # ansible-devops
 
+Installtion of Ansible in CentOS/Amazon Linux Machine 2
+
+ sudo amazon-linux-extras install epel
+
+ sudo yum install ansible -y
+ ansible --verion
+ =============================
 
 Installation of Ansible in Ubuntu
 
