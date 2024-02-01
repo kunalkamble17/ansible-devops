@@ -1,5 +1,5 @@
--
-  name: ignore erros
+---
+- name: ignore errors
   hosts: all
   gather_facts: true
   tasks:
@@ -8,26 +8,22 @@
         msg: "CentOS"
       when: ansible_distribution == "CentOS"
 
-   - name: print OS 2
+    - name: print OS 2
       debug:
-        msg: "CentOS"
+        msg: "RedHat Family (CentOS)"
       when: ansible_distribution == "CentOS" and ansible_os_family == "RedHat"
 
     - name: print OS 3
       debug:
-        msg: "CentOS"
-      when: ansible_distribution == "ubuntu" and ansible_os_family == "RedHat"
+        msg: "Ubuntu Family"
+      when: ansible_distribution == "Ubuntu" and ansible_os_family == "Debian"
 
     - name: print OS 4
       debug:
-        msg: "CentOS"
-      when: ansible_distribution == "CentOS" or ansible_os_family == "Ubuntu"
-      
+        msg: "CentOS or Ubuntu"
+      when: ansible_distribution == "CentOS" or ansible_distribution == "Ubuntu"
 
     - name: print OS 5
       debug:
         msg: "Ubuntu"
       when: ansible_distribution == "Ubuntu"
-  
-   
-  
