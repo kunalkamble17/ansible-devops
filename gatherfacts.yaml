@@ -1,7 +1,16 @@
 -
   name: Gather Fact
   hosts: all
+  gather_facts: true #use this when gathering fact is disble in ansible.ckg file
   tasks:
     - name: print Hello Babes
       debug:
         msg: "Kya Bolte Public"
+
+    - name: Print OS Name
+      debug:
+        msg: "{{ansible_distribution}}"
+
+    - name: Print Ip Address
+      debug:
+        msg: "{{ansible_default_ipv4.address}}"
