@@ -2,6 +2,12 @@
   hosts: servers
   become: true
   tasks:
+
+    - name: python2
+      yum:
+        name: python2-rpm
+        state: present
+        
     - name: Install HTTPD
       yum:
         name: httpd
