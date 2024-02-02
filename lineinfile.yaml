@@ -1,5 +1,6 @@
 - name: Line In File and Block in file playbook
   hosts: all
+  become: true
   tasks:
     - name: line-in-file
       lineinfile:
