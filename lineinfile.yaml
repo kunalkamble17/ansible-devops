@@ -20,3 +20,10 @@
         path: /mnt/file1.conf
         line: 'httpd is a service'
         state: absent
+
+    - name: block in file
+      blockinfile:
+        path: /mnt/file1.conf
+        block:
+          ProxyPass /sample http://localhost:8080/sample
+          ProxyPassReverse /sample http://localhost/sample
