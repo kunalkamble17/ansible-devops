@@ -1,0 +1,8 @@
+- name: Line In File and Block in file playbook
+  hosts: all
+  tasks:
+    - name: line-in-file
+      lineinfile:
+        path: /mnt/file1.conf
+        regexp: "tomcat"
+        line: "chage tomcat to apache"     

@@ -25,3 +25,8 @@
         name: httpd
         state: started
         enabled: true
+
+    - name: copy a file file1.conf
+      copy:
+        src: file1.conf
+        dest: /mnt/file1.conf
