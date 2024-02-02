@@ -7,3 +7,16 @@
         path: /mnt/file1.conf
         regexp: "tomcat"
         line: "chage tomcat to apache"     
+
+    - name: insert a new line 
+      lineinfile:
+        path: /mnt/file1.conf
+        line: 'This is nginx'
+        insertafter: 'nginx is a service'
+        state: present
+
+    - name: the line you want to remove
+      lineinfile:
+        path: /mnt/file1.conf
+        line: 'httpd is a service'
+        state: absent
