@@ -1,0 +1,25 @@
+- name: Webserver Playbook
+  hosts: all
+  tasks:
+    - name: Install packages
+      package:
+        name: "{{item}}"
+        state: latest
+      loop:
+        - httpd
+
+    - name: Congfiure httpd
+      copy:
+        src: proxy.conf
+        dest: /etc/httpd/conf.d/proxy.conf
+
+    - name: Deploy Application
+      get_url:
+        url: https://s3-us-west-2.amazonaws.com/studentapi-cit/index.html
+        dest: /var/www/html/index.html
+
+    - name: Start and Enable Service
+      systemd:
+        name: httpd
+        state: started
+        enabled: true
