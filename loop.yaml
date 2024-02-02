@@ -3,7 +3,7 @@
   tasks:
 
   - name: install git, wget, vim, httpd
-    yum:
+    package:
       name: "{{item}}"
       state: present
     become: true
