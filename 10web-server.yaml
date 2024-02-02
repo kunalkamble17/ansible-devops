@@ -1,6 +1,7 @@
 - name: Webserver Playbook
   hosts: all
   tasks:
+  become: true
     - name: Install packages
       package:
         name: "{{item}}"
