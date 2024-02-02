@@ -1,7 +1,8 @@
+---
 - name: Webserver Playbook
   hosts: all
-  tasks:
   become: true
+  tasks:
     - name: Install packages
       package:
         name: "{{item}}"
@@ -9,7 +10,7 @@
       loop:
         - httpd
 
-    - name: Congfiure httpd
+    - name: Configure httpd
       copy:
         src: proxy.conf
         dest: /etc/httpd/conf.d/proxy.conf
