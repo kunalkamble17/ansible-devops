@@ -24,12 +24,12 @@
     - name: css template download
       get_url:
         url: https://www.free-css.com/assets/files/free-css-templates/download/page296/spering.zip
-        dest: /opt/webapps
+        dest: /opt/apache-tomcat-8.5.98/webapps/
 
     - name: unzip the file
       unarchive:
         src: /opt/apache-tomcat-8.5.98/webapps/spering.zip
-        dest: /opt/apache-tomcat-8.5.98/
+        dest: /opt/apache-tomcat-8.5.98/webapps/
         remote_src: true
 
     - name: delete zip file
