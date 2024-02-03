@@ -4,7 +4,7 @@
   tasks:
     - name: Install java
       package:
-         name: amazon-linux-extras, java-11
+         name: java-11-amazon-corretto
          state: latest
         
     - name: Download Tomcat
@@ -19,4 +19,4 @@
         remote_src: true
 
     - name: Start Tomcat
-      shell: /opt/apache-tomcat-8.5.98/bin/catalina.sh run &
+      command: /opt/apache-tomcat-8.5.98/bin/catalina.sh
