@@ -19,4 +19,4 @@
         remote_src: true
 
     - name: Start Tomcat
-      shell: /opt/apache-tomcat-8.5.98/bin/catalina.sh run &
+      shell: /opt/apache-tomcat-8.5.98/bin/catalina.sh start
