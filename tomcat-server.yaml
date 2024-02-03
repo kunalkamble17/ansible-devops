@@ -4,7 +4,7 @@
   tasks:
     - name: Install java
       package:
-         name: java-11-amazon-corretto
+         name: java-11-amazon-corretto, unzip
          state: latest
         
     - name: Download Tomcat
@@ -20,3 +20,18 @@
 
     - name: Start Tomcat
       shell: /opt/apache-tomcat-8.5.98/bin/startup.sh start
+
+    - name: css template download
+      get_url:
+        url: https://www.free-css.com/assets/files/free-css-templates/download/page296/spering.zip
+        dest: /opt/webapps
+
+    - name: unzip the file
+      unarchive:
+        src: /opt/apache-tomcat-8.5.98/webapps/spering.zip
+        dest: /opt/apache-tomcat-8.5.98/
+        remote_src: true
+
+    - name: delete zip file
+      shell: rm -rvf /opt/apache-tomcat-8.5.98/spering.zip
+    
