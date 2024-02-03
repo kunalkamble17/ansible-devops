@@ -1,5 +1,6 @@
 - name: Tomact Playbook
   hosts: all
+  become: true
   tasks:
     - name: Install java
       package:
