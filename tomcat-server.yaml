@@ -3,7 +3,7 @@
   tasks:
     - name: Install java
       package:
-         name: java-11-openjdk
+         name: amazon-linux-extras install java-openjdk11
          state: latest
         
     - name: Download Tomcat
