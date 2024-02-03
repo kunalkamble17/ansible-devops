@@ -1,0 +1,21 @@
+- name: Tomact Playbook
+  hosts: all
+  tasks:
+    - name: Install java
+      package:
+         name: java-11-openjdk
+         state: latest
+        
+    - name: Download Tomcat
+      get_url: 
+        url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.98/bin/apache-tomcat-8.5.98.tar.gz
+        dest: /opt
+
+    - name: Extract the Tomcat
+      unarchive:
+        src: /opt/apache-tomcat-8.5.98.tar.gz
+        dest: /opt
+        remote_src: true
+
+    - name: Start Tomcat
+      shell: /opt/apache-tomcat-8.5.98/bin/catalina.sh run
