@@ -3,4 +3,4 @@
   hosts: all
   become: true
   roles:
-    -  /home/ec2-user/ansible-devops/roles/web-server1
+    - web-server1
