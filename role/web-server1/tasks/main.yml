@@ -3,7 +3,7 @@
     - name: httpd
       state: latest
 
-    -name: configure Proxy
+    - name: configure Proxy
      copy:
         src: proxy.conf
         dest: /etc/httpd/conf.d/proxy.conf
