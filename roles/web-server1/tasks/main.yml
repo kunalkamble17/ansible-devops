@@ -9,6 +9,11 @@
     src: proxy.conf
     dest: /etc/httpd/conf.d/proxy.conf
 
+- name: Deploy application
+  get_url:
+    url: https://s3-us-west-2.amazonaws.com/studentapi-cit/index.html
+    dest: /var/www/html
+
 - name: Start and enable httpd service
   systemd:
     name: httpd
