@@ -1,4 +1,5 @@
 - name: install httpd
+  become: true
   yum:
     - name: httpd
       state: latest
