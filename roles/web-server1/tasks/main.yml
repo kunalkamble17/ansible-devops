@@ -1,15 +1,16 @@
-- name: install httpd
+---
+- name: Install httpd
   yum:
-    - name: httpd
-      state: latest
+    name: httpd
+    state: latest
 
-    - name: configure Proxy
-      copy:
-        src: proxy.conf
-        dest: /etc/httpd/conf.d/proxy.conf
+- name: Configure Proxy
+  copy:
+    src: proxy.conf
+    dest: /etc/httpd/conf.d/proxy.conf
 
-    - name:
-      systemd:
-        name: httpd
-        state: started
-        enabled: yes
+- name: Start and enable httpd service
+  systemd:
+    name: httpd
+    state: started
+    enabled: yes
