@@ -13,4 +13,4 @@
       systemd:
         name: httpd
         state: started
-        enabled: true
+        enabled: yes
