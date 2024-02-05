@@ -1,2 +1,15 @@
----
-# tasks file for web-server1
+- name: install httpd
+  yum:
+    - name: httpd
+      state: latest
+
+    -name: configure Proxy
+     copy:
+        src: proxy.conf
+        dest: /etc/httpd/conf.d/proxy.conf
+
+    - name:
+      systemd:
+        name: httpd
+        state: started
+        enabled: true
