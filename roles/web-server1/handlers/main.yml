@@ -1,2 +1,8 @@
 ---
 # handlers file for web-server1
+
+- name: Start and enable httpd service
+  systemd:
+    name: httpd
+    state: restarted
+    enabled: yes
