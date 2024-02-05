@@ -2,4 +2,4 @@
 - name: Deploy ansible role
   hosts: all
   roles:
-    - web-server1
+    -  /home/ec2-user/ansible-devops/roles/web-server1
