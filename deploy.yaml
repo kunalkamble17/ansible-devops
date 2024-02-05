@@ -1,0 +1,8 @@
+- name: Install apaache
+  hosts: all
+  become: true
+  tasks:
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: present

@@ -1,0 +1,12 @@
+- name: conditions
+  hosts: all
+  tasks:
+
+   - name: print os
+     debug:
+       msg: "Centos Machine"
+     when: ansible_distribution == "CentOS"
+
+   - name: print os
+     debug:
+       msg: "Centos Machine 2222"
