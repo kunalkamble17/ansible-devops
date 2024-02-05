@@ -4,7 +4,7 @@
       state: latest
 
     - name: configure Proxy
-     copy:
+      copy:
         src: proxy.conf
         dest: /etc/httpd/conf.d/proxy.conf
 
