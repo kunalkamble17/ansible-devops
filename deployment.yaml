@@ -4,3 +4,4 @@
   become: true
   roles:
     - web-server1
+    - tomcat-role
