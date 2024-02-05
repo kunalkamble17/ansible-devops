@@ -1,4 +1,5 @@
+---
 - name: Deploy ansible role
-  host: all
+  hosts: all
   roles:
     - web-server1
